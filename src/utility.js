@@ -1,5 +1,6 @@
-export const filterProducts=(initialData, searchText, onlyInStock)=>{
+export const filterProducts=(initialData, searchText='', onlyInStock)=>{
     const  regex = new RegExp("^" + searchText, "i");
+    
     const filterOnlyInStock=(filteredOnSearch)=>{
         return filteredOnSearch.filter(product=>product.stocked);
     }
@@ -8,10 +9,10 @@ export const filterProducts=(initialData, searchText, onlyInStock)=>{
     return onlyInStock? filterOnlyInStock(filteredOnSearch): filteredOnSearch;
 }
 
-export const categorizeProduct=(allProducts)=>{
+export const categorizeProduct=(products)=>{
     const categorizedProducts={};
 
-    allProducts.forEach((product)=>{
+    products.forEach((product)=>{
         if(categorizedProducts.hasOwnProperty(product.category)){
             categorizedProducts[product.category].push(product);
         }else{

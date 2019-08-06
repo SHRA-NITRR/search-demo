@@ -4,7 +4,7 @@ const Checkbox=(props)=> {
 
     return (
         <div>
-            <label>
+            <label className="checkbox-inline">
                 <input 
                     type="checkbox" 
                     checked={props.isChecked}

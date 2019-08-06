@@ -6,7 +6,8 @@ const SearchInput=(props)=>{
         <input 
             type='search' 
             onChange={(event)=>props.onSearch(event.target.value)}
-            placeholder='Search'
+            placeholder='Search...'
+            className="form-control" 
         />
     )
 }
