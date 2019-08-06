@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Product=(props)=>{
-    const {category, name, price, stocked}=props.productDetails;
+    const {name, price, stocked}=props.productDetails;
     return( 
             <div className='panel panel-default'>
                <div className="panel-body product-details">
